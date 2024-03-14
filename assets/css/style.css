@@ -1,0 +1,90 @@
+/* General CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+/* Custom CSS */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 6%;
+  background: #e0eafc;
+  background: -webkit-linear-gradient(to right, #cfdef3, #e0eafc);
+  background: linear-gradient(to right, #cfdef3, #e0eafc);
+}
+
+.header-title h1 {
+  color: black;
+  font-size: 48px;
+  cursor: pointer;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px white;
+}
+
+.header-title .divider {
+  background-color: black;
+  width: 50%;
+  height: 4px;
+  border: none;
+  margin: 5px auto 0;
+  transition: all 0.5s;
+}
+
+.header-title:hover .divider {
+  width: 100%;
+}
+
+.gallery {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.gallery .image {
+  flex-basis: 25%;
+  padding: 4px;
+}
+
+.gallery .image:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+.gallery img {
+  width: 100%;
+  transition: all 0.5s;
+}
+
+footer {
+  text-align: center;
+  padding: 1.875rem;
+}
+
+@media (max-width: 1000px) {
+  .gallery .image {
+    flex-basis: 50%;
+  }
+
+  .header-title h1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 500px) {
+  .header-title h1 {
+    font-size: 24px;
+  }
+  .gallery .image {
+    flex-basis: 100%;
+  }
+}
